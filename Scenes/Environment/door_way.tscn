@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c1b28ee8dtne6"]
+
+[ext_resource type="Script" uid="uid://n2ckkad01f0b" path="res://Scripts/Environment Scripts/doorway.gd" id="1_e4bb4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbnju"]
+size = Vector2(25, 47)
+
+[node name="Door way" type="Area2D" unique_id=206425467]
+script = ExtResource("1_e4bb4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=630794267]
+position = Vector2(12.5, 23.5)
+shape = SubResource("RectangleShape2D_pbnju")
+
+[node name="Spawnpoint" type="Marker2D" parent="." unique_id=2003629538]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

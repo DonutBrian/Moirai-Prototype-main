@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bctrql532a0md"]
+
+[ext_resource type="Script" uid="uid://b45db4grff05o" path="res://Scripts/sqlite_test.gd" id="1_2a5dk"]
+
+[node name="Node" type="Node" unique_id=2029731786]
+script = ExtResource("1_2a5dk")
