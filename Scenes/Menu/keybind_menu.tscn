@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://bpqhdws8cbdg6"]
+
+[ext_resource type="Script" uid="uid://bko37prse5ovs" path="res://Scripts/Menu/keybindmenu.gd" id="1_bl8ho"]
+
+[node name="Keybind Menu" type="Control" unique_id=1177178591]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bl8ho")
+
+[node name="Window" type="MarginContainer" parent="." unique_id=1050054146]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window" unique_id=168019827]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Window/VBoxContainer" unique_id=1510845244]
+layout_mode = 2
+
+[node name="Move Left" type="Label" parent="Window/VBoxContainer/HBoxContainer" unique_id=189197722]
+layout_mode = 2
+text = "Move Left"
+
+[node name="LeftButton" type="Button" parent="Window/VBoxContainer/HBoxContainer" unique_id=760837466]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Window/VBoxContainer" unique_id=1676166655]
+layout_mode = 2
+
+[node name="Move Right" type="Label" parent="Window/VBoxContainer/HBoxContainer2" unique_id=1012352641]
+layout_mode = 2
+text = "Move Right"
+
+[node name="RightButton" type="Button" parent="Window/VBoxContainer/HBoxContainer2" unique_id=1355187349]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Window/VBoxContainer" unique_id=898953725]
+layout_mode = 2
+
+[node name="Jump" type="Label" parent="Window/VBoxContainer/HBoxContainer3" unique_id=331562443]
+layout_mode = 2
+text = "Jump"
+
+[node name="JumpButton" type="Button" parent="Window/VBoxContainer/HBoxContainer3" unique_id=1608302009]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Window/VBoxContainer" unique_id=239441738]
+layout_mode = 2
+
+[node name="Dash" type="Label" parent="Window/VBoxContainer/HBoxContainer4" unique_id=518745694]
+layout_mode = 2
+text = "Dash"
+
+[node name="DashButton" type="Button" parent="Window/VBoxContainer/HBoxContainer4" unique_id=1442614875]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Window/VBoxContainer" unique_id=4016957]
+layout_mode = 2
+
+[node name="Attack" type="Label" parent="Window/VBoxContainer/HBoxContainer5" unique_id=1862212565]
+layout_mode = 2
+text = "Attack"
+
+[node name="AttackButton" type="Button" parent="Window/VBoxContainer/HBoxContainer5" unique_id=16421333]
+layout_mode = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Window/VBoxContainer" unique_id=157148682]
+layout_mode = 2
+
+[node name="Save" type="Label" parent="Window/VBoxContainer/HBoxContainer6" unique_id=499449770]
+layout_mode = 2
+text = "Save"
+
+[node name="SaveButton" type="Button" parent="Window/VBoxContainer/HBoxContainer6" unique_id=2096382337]
+layout_mode = 2
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="Window/VBoxContainer" unique_id=1788903269]
+layout_mode = 2
+
+[node name="Interact" type="Label" parent="Window/VBoxContainer/HBoxContainer7" unique_id=526140507]
+layout_mode = 2
+text = "Interact"
+
+[node name="InteractButton" type="Button" parent="Window/VBoxContainer/HBoxContainer7" unique_id=268465821]
+layout_mode = 2
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="Window/VBoxContainer" unique_id=190358881]
+layout_mode = 2
+
+[node name="Menu" type="Label" parent="Window/VBoxContainer/HBoxContainer8" unique_id=1405547565]
+layout_mode = 2
+text = "Menu"
+
+[node name="MenuButton" type="Button" parent="Window/VBoxContainer/HBoxContainer8" unique_id=2075047793]
+layout_mode = 2
+
+[connection signal="pressed" from="Window/VBoxContainer/HBoxContainer/LeftButton" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="Window/VBoxContainer/HBoxContainer2/RightButton" to="." method="_on_right_button_pressed"]
+[connection signal="pressed" from="Window/VBoxContainer/HBoxContainer3/JumpButton" to="." method="_on_jump_button_pressed"]
+[connection signal="pressed" from="Window/VBoxContainer/HBoxContainer4/DashButton" to="." method="_on_dash_button_pressed"]
+[connection signal="pressed" from="Window/VBoxContainer/HBoxContainer5/AttackButton" to="." method="_on_attack_button_pressed"]
+[connection signal="pressed" from="Window/VBoxContainer/HBoxContainer6/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="Window/VBoxContainer/HBoxContainer7/InteractButton" to="." method="_on_interact_button_pressed"]
+[connection signal="pressed" from="Window/VBoxContainer/HBoxContainer8/MenuButton" to="." method="_on_menu_button_pressed"]

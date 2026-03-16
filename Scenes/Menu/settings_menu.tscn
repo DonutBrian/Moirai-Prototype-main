@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://b76liyl0bogmx"]
+
+[ext_resource type="Script" uid="uid://b32814oenhc22" path="res://Scripts/Menu/res_options.gd" id="1_icv2g"]
+[ext_resource type="Script" uid="uid://ch54rmg0hplo7" path="res://Scripts/Menu/colour_options.gd" id="2_8ef0u"]
+[ext_resource type="Script" uid="uid://6ijavq281w87" path="res://Scripts/Menu/keybindbutton.gd" id="3_poyrj"]
+[ext_resource type="Script" uid="uid://bgndnv63yevgi" path="res://Scripts/Menu/settingsreturn.gd" id="4_a3akj"]
+
+[node name="Settings Menu" type="Control" unique_id=1603443406]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu Window" type="MarginContainer" parent="." unique_id=1200606184]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu Window" unique_id=1788351460]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Resolution" type="HBoxContainer" parent="Menu Window/VBoxContainer" unique_id=1323609153]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Menu Window/VBoxContainer/Resolution" unique_id=1330313198]
+layout_mode = 2
+text = "Resolution"
+
+[node name="ResOptions" type="OptionButton" parent="Menu Window/VBoxContainer/Resolution" unique_id=260377362]
+layout_mode = 2
+script = ExtResource("1_icv2g")
+
+[node name="Colourblind Mode" type="HBoxContainer" parent="Menu Window/VBoxContainer" unique_id=655539631]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Menu Window/VBoxContainer/Colourblind Mode" unique_id=1281567757]
+layout_mode = 2
+text = "Colour mode"
+
+[node name="ColourOptions" type="OptionButton" parent="Menu Window/VBoxContainer/Colourblind Mode" unique_id=1868886197]
+layout_mode = 2
+script = ExtResource("2_8ef0u")
+
+[node name="Keybind" type="HBoxContainer" parent="Menu Window/VBoxContainer" unique_id=861410474]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Menu Window/VBoxContainer/Keybind" unique_id=1573252161]
+layout_mode = 2
+text = "Keybinds"
+
+[node name="KeybindButton" type="Button" parent="Menu Window/VBoxContainer/Keybind" unique_id=1254968623]
+layout_mode = 2
+script = ExtResource("3_poyrj")
+
+[node name="Return" type="Button" parent="Menu Window/VBoxContainer" unique_id=1065054459]
+layout_mode = 2
+text = "Return"
+script = ExtResource("4_a3akj")
+
+[connection signal="item_selected" from="Menu Window/VBoxContainer/Resolution/ResOptions" to="Menu Window/VBoxContainer/Resolution/ResOptions" method="_on_item_selected"]
+[connection signal="item_selected" from="Menu Window/VBoxContainer/Colourblind Mode/ColourOptions" to="Menu Window/VBoxContainer/Colourblind Mode/ColourOptions" method="_on_item_selected"]
+[connection signal="pressed" from="Menu Window/VBoxContainer/Keybind/KeybindButton" to="Menu Window/VBoxContainer/Keybind/KeybindButton" method="_on_pressed"]
+[connection signal="pressed" from="Menu Window/VBoxContainer/Return" to="Menu Window/VBoxContainer/Return" method="_on_pressed"]

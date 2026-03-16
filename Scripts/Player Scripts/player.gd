@@ -42,7 +42,7 @@ func _ready():
 	DASHES_REMAINING = MAX_DASHES
 	
 	print("Loading game...")
-	SaveManager._load(self)
+	SaveManager._load(self, SaveManager.current_save)
 	
 	await get_tree().process_frame
 	DoorManager.spawn_player()
@@ -55,4 +55,4 @@ func start_iframes(duration: float):
 func _input(event):
 	if event.is_action_pressed("Save"):
 		print("Saving game...")
-		SaveManager._save(self)
+		SaveManager._save(self, SaveManager.current_save)

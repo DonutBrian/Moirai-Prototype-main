@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://isck8emip0ts"]
+
+[ext_resource type="Script" uid="uid://d4j1lhpk18jab" path="res://Scripts/Menu/main_menu.gd" id="1_28flt"]
+
+[node name="Main Menu" type="Control" unique_id=1979259645]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_28flt")
+
+[node name="Menu Window" type="MarginContainer" parent="." unique_id=1928567709]
+custom_minimum_size = Vector2(800, 500)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu Window" unique_id=1134100617]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Game Title" type="Label" parent="Menu Window/VBoxContainer" unique_id=199826744]
+layout_mode = 2
+theme_override_font_sizes/font_size = 96
+text = "Moirai"
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="Menu Window/VBoxContainer" unique_id=1958920145]
+custom_minimum_size = Vector2(400, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Play"
+
+[node name="Settings" type="Button" parent="Menu Window/VBoxContainer" unique_id=1834383670]
+custom_minimum_size = Vector2(400, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Settings"
+
+[node name="Quit" type="Button" parent="Menu Window/VBoxContainer" unique_id=606720413]
+custom_minimum_size = Vector2(400, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Quit"
+
+[connection signal="pressed" from="Menu Window/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Menu Window/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Menu Window/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

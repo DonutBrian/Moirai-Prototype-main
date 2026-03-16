@@ -8,7 +8,7 @@ func _ready():
 
 func _on_scene_changed():
 	doors.clear()
-	await get_tree()
+	await get_tree().process_frame
 	await get_tree().process_frame
 	spawn_player()
 
