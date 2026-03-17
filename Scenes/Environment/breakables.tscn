@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c5bcsegaoc4a3"]
+
+[ext_resource type="Script" uid="uid://bx03aql5c4q33" path="res://Scripts/Environment Scripts/breakables.gd" id="1_ac2c4"]
+[ext_resource type="PackedScene" uid="uid://1nsqcgnahr2" path="res://Scenes/Environment/death_zone.tscn" id="2_nankq"]
+
+[node name="Breakables" type="StaticBody2D" unique_id=814091781]
+script = ExtResource("1_ac2c4")
+
+[node name="Damage Zone" parent="." unique_id=686494003 instance=ExtResource("2_nankq")]
+monitoring = false

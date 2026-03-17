@@ -14,8 +14,8 @@ script = ExtResource("1_28flt")
 [node name="Menu Window" type="MarginContainer" parent="." unique_id=1928567709]
 custom_minimum_size = Vector2(800, 500)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1283.0
+offset_bottom = 726.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menu Window" unique_id=1134100617]
 layout_mode = 2

@@ -1,14 +1,62 @@
 [gd_scene format=3 uid="uid://bmgs4nmg44063"]
 
-[node name="Skill Tree" type="Control"]
+[ext_resource type="Script" uid="uid://cqlyrdom8kolw" path="res://Scripts/Menu/skill_tree.gd" id="1_1fayr"]
+
+[node name="Skill Tree" type="Control" unique_id=833535340]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1fayr")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Class Select Menu" type="VBoxContainer" parent="." unique_id=1135632313]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Class Select Menu" unique_id=190823530]
+layout_mode = 2
+text = "Choose Your Class"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Class Select Menu" unique_id=948684195]
+layout_mode = 2
+
+[node name="Knight" type="Button" parent="Class Select Menu/HBoxContainer" unique_id=533826381]
+layout_mode = 2
+
+[node name="Archer" type="Button" parent="Class Select Menu/HBoxContainer" unique_id=180150164]
+layout_mode = 2
+
+[node name="Assassin" type="Button" parent="Class Select Menu/HBoxContainer" unique_id=1666235420]
+layout_mode = 2
+
+[node name="Warlock" type="Button" parent="Class Select Menu/HBoxContainer" unique_id=1080497766]
+layout_mode = 2
+
+[node name="Druid" type="Button" parent="Class Select Menu/HBoxContainer" unique_id=1524814417]
+layout_mode = 2
+
+[node name="Tree" type="Control" parent="." unique_id=653947940]
+visible = false
+anchors_preset = 0
+offset_top = 39.0
+offset_right = 141.0
+offset_bottom = 56.0
+
+[node name="Button" type="Button" parent="Tree" unique_id=521043004]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Button" type="Button" parent="." unique_id=1936895267]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="Class Select Menu/HBoxContainer/Knight" to="." method="_on_knight_pressed"]
+[connection signal="pressed" from="Class Select Menu/HBoxContainer/Archer" to="." method="_on_archer_pressed"]
+[connection signal="pressed" from="Class Select Menu/HBoxContainer/Assassin" to="." method="_on_assassin_pressed"]
+[connection signal="pressed" from="Class Select Menu/HBoxContainer/Warlock" to="." method="_on_warlock_pressed"]
+[connection signal="pressed" from="Class Select Menu/HBoxContainer/Druid" to="." method="_on_druid_pressed"]

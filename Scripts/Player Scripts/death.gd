@@ -10,4 +10,4 @@ func enter():
 	sprite.animation_finished.connect(_on_hurt_finished, CONNECT_ONE_SHOT)
 	
 func _on_hurt_finished():
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://Scenes/Menu/death_screen.tscn")

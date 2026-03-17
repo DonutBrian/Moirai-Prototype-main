@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://biad48jhix3ew"]
+
+[ext_resource type="Script" uid="uid://bgqnvgj0j5vrh" path="res://Scripts/Menu/death_screen.gd" id="1_h6w7d"]
+
+[node name="Death Screen" type="Control" unique_id=1213186531]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h6w7d")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1599259987]
+custom_minimum_size = Vector2(800, 500)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1281263257]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=198344334]
+layout_mode = 2
+theme_override_font_sizes/font_size = 96
+text = "You died"
+horizontal_alignment = 1
+
+[node name="Reload" type="Button" parent="MarginContainer/VBoxContainer" unique_id=393640100]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Reload"
+
+[node name="Main Menu" type="Button" parent="MarginContainer/VBoxContainer" unique_id=804807188]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Main Menu"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=342832646]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Reload" to="." method="_on_reload_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

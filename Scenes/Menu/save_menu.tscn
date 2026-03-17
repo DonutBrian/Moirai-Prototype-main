@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c15bfskooqkgm"]
 
-[ext_resource type="Script" path="res://Scripts/save_menu.gd" id="1_exuoe"]
+[ext_resource type="Script" uid="uid://clpq5o3eei2i1" path="res://Scripts/Menu/save_menu.gd" id="1_h0dba"]
 
 [node name="Save Menu" type="Control" unique_id=1974465709]
 layout_mode = 3
@@ -10,7 +10,7 @@ offset_right = -0.08001709
 offset_bottom = -0.27999878
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_exuoe")
+script = ExtResource("1_h0dba")
 
 [node name="Save Window" type="MarginContainer" parent="." unique_id=1655636115]
 layout_mode = 0
