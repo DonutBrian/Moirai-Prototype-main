@@ -4,15 +4,16 @@
 
 [node name="Save Menu" type="Control" unique_id=1974465709]
 layout_mode = 3
-anchor_right = 0.586
-anchor_bottom = 0.624
-offset_right = -0.08001709
-offset_bottom = -0.27999878
+anchor_right = 0.62700003
+anchor_bottom = 0.62600005
+offset_right = 0.4399414
+offset_bottom = 0.27996826
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_h0dba")
 
 [node name="Save Window" type="MarginContainer" parent="." unique_id=1655636115]
+custom_minimum_size = Vector2(800, 500)
 layout_mode = 0
 offset_right = 740.0
 offset_bottom = 420.0

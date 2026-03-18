@@ -199,7 +199,6 @@ shape = SubResource("RectangleShape2D_1tdjj")
 [node name="Coins" parent="." unique_id=1513597269 instance=ExtResource("4_6jfph")]
 position = Vector2(-118, 44)
 collision_layer = 4
-VALUE = 1
 MAGNET_RANGE = 32
 MAGNET_SPEED = 10
 
@@ -214,5 +213,14 @@ destination_door_id = "Test2"
 
 [node name="Door way2" parent="." unique_id=1440107352 instance=ExtResource("6_llkey")]
 position = Vector2(109, -85)
-door_id = "Test2"
-destination_door_id = "Test1"
+door_id = "Door2"
+destination_door_id = "Door3"
+
+[node name="Door way3" parent="." unique_id=1484892281 instance=ExtResource("6_llkey")]
+position = Vector2(-167, -98)
+door_id = "Door3"
+destination_door_id = "Door2"
+
+[node name="Coins2" parent="." unique_id=97484474 instance=ExtResource("4_6jfph")]
+position = Vector2(86, 41)
+RESPAWNABLE = true

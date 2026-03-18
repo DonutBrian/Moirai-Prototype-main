@@ -13,8 +13,8 @@ script = ExtResource("1_bl8ho")
 
 [node name="Window" type="MarginContainer" parent="." unique_id=1050054146]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 133.0
+offset_bottom = 233.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Window" unique_id=168019827]
 layout_mode = 2
@@ -99,6 +99,10 @@ text = "Menu"
 [node name="MenuButton" type="Button" parent="Window/VBoxContainer/HBoxContainer8" unique_id=2075047793]
 layout_mode = 2
 
+[node name="Return" type="Button" parent="Window/VBoxContainer" unique_id=1829721756]
+layout_mode = 2
+text = "Return"
+
 [connection signal="pressed" from="Window/VBoxContainer/HBoxContainer/LeftButton" to="." method="_on_left_button_pressed"]
 [connection signal="pressed" from="Window/VBoxContainer/HBoxContainer2/RightButton" to="." method="_on_right_button_pressed"]
 [connection signal="pressed" from="Window/VBoxContainer/HBoxContainer3/JumpButton" to="." method="_on_jump_button_pressed"]
@@ -107,3 +111,4 @@ layout_mode = 2
 [connection signal="pressed" from="Window/VBoxContainer/HBoxContainer6/SaveButton" to="." method="_on_save_button_pressed"]
 [connection signal="pressed" from="Window/VBoxContainer/HBoxContainer7/InteractButton" to="." method="_on_interact_button_pressed"]
 [connection signal="pressed" from="Window/VBoxContainer/HBoxContainer8/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Window/VBoxContainer/Return" to="." method="_on_return_pressed"]
